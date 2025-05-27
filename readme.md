@@ -1,6 +1,6 @@
 # JSON REQUEST
 ### v 1.0
-## Query a simple standard JSON file (from One table MySQL export)**
+## Query a simple standard JSON file (from One table MySQL export)
 
 **Usage**
 

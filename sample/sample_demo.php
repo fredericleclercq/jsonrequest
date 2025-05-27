@@ -45,10 +45,10 @@
          <code class="code">
             <legend>php</legend>               
                 getColumns()<br>
+                getDatas()<br> 
                 <br>
                 filter()<sup>*</sup><br>
-                sort()<sup>*</sup><br>
-                getDatas()<sup>*</sup><br>                
+                sort()<sup>*</sup><br>                               
                 reset()<sup>*</sup> <br>
                 <br>
                 showDatas()<br>
