@@ -1,0 +1,45 @@
+.jsonrequest {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: sans-serif;
+  margin:20px 0;
+}
+
+.jsonrequest td,
+.jsonrequest th {
+  border: 1px solid #bbb;
+  padding: 8px;
+}
+
+.jsonrequest th {
+  background:#e8e8e8;
+  text-transform: capitalize;
+}
+
+main {
+  width: 80vw;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.code {
+  position: relative;
+  display: inline-block;
+  background: black;
+  color: white;
+  font-family: monospace;
+  padding: 12px;
+  min-width: 600px;
+  margin: 8px 0;
+  border-radius: 12px;
+}
+.code legend {
+  padding: 6px;
+  background: green;
+  border-radius: 200px;
+  position: absolute;
+  top: -12px;
+  right: 5px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
