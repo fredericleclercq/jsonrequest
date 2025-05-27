@@ -1,4 +1,5 @@
 # JSON REQUEST
+### v1.0
 ## Query a simple standard JSON file (from One table MySQL export)**
 
 **Usage**
@@ -9,7 +10,7 @@ $datas = new JsonRequest('users.json');
 echo $datas->showDatas();
 ```
 
-![screenshot(./screen.png)
+![screenshot](./screen.png)
 
 
 **Methods**
