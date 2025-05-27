@@ -1,5 +1,5 @@
 # JSON REQUEST
-### v1.0
+### v 1.0
 ## Query a simple standard JSON file (from One table MySQL export)**
 
 **Usage**
@@ -12,26 +12,31 @@ echo $datas->showDatas();
 
 ![screenshot](./screen.png)
 
-
 **Methods**
 
-filter(String $field, Mixed $value, String $comparator = '==', Bool $case_sensitive = false, Mixed $source = null): object
-**By default, source is current complete file, but you can use a filtered result**
+```php
 
-*supported comparators*
-      - ==
-      - LIKE
-      - >
-      - >=
-      -  <
-      -  <=
-      -  BETWEEN ( value must be array [min,max] , inclusive)
+✔️ getColumns(): array
+✔️ getDatas() : array
+✔️ reset(): object
 
-sort(String $field, String $direction = 'ASC', Mixed &$source = null): object
+✔️ filter(String $field, Mixed $value, String $comparator = '==', Bool $case_sensitive = false): object
+✔️ sort(String $field, String $direction = 'ASC'): object
 
-showDatas(array $onlycolumns = array(), Bool $reset = false): String
+✔️ showDatas(array $onlycolumns = array(), Bool $reset = false): String
+```
+*Supported comparators*
+>+ == *(default)*
+>+ LIKE
+>+ \>
+>+ \>=
+>+ <
+>+ <=
+>+ BETWEEN (value must be an array [min,max] , inclusive)
 
-*Output html table with class "jsonrequest" to stylize in css
+**Output html table with class "jsonrequest" to stylize in css**
+
+*Sample:*
 
 ```css
 .jsonrequest{
@@ -45,3 +50,4 @@ showDatas(array $onlycolumns = array(), Bool $reset = false): String
     padding:8px;
 }
 ```
+**You can find a complete sample in sample directory**
