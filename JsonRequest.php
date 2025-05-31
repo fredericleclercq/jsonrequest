@@ -16,12 +16,17 @@ class JsonRequest
     protected $selection = null;
     protected $currentfile = null;
 
-    public function __construct(String $file)
+    public function __construct(Mixed $file, Bool $isfile = true)
     {
-        if (file_exists($file)) {
+        if ($isfile && file_exists($file)) {
             $this->currentfile = $file;
             $this->file = json_decode(file_get_contents($file));
-        } else throw new Exception('File not found : ' . $file);
+        } elseif(!$isfile){
+            $this->file = $file;
+        }
+        else throw new Exception('File not found : ' . $file . ' or invalid ressource');
+
+        
     }
 
     public function filter(String $field, Mixed $value, String $comparator = '==', Bool $case_sensitive = false): object

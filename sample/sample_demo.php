@@ -42,18 +42,18 @@
         ?>
         <h2>Methods</h2>
         <hr>
-         <code class="code">
-            <legend>php</legend>               
-                getColumns()<br>
-                getDatas()<br> 
-                <br>
-                filter()<sup>*</sup><br>
-                sort()<sup>*</sup><br>                               
-                reset()<sup>*</sup> <br>
-                <br>
-                showDatas()<br>
-                <br>
-                *  <em>chainable methods</em>
+        <code class="code">
+            <legend>php</legend>
+            getColumns()<br>
+            getDatas()<br>
+            <br>
+            filter()<sup>*</sup><br>
+            sort()<sup>*</sup><br>
+            reset()<sup>*</sup> <br>
+            <br>
+            showDatas()<br>
+            <br>
+            * <em>chainable methods</em>
         </code>
         <h2>Show all</h2>
         <hr>
@@ -262,7 +262,7 @@
             foreach ($datas->getDatas() as $obj) {<br>
             <?php echo TAB ?>echo $obj->lastname . ' ' . $obj->firstname . '&lt;br&gt;';<br>
             }<br>
-              $datas->reset();
+            $datas->reset();
         </code>
         <p>
             <?php
@@ -271,6 +271,23 @@
                 echo $obj->lastname . ' ' . $obj->firstname . '<br>';
             }
             $datas->reset();
+            ?>
+        </p>
+
+        <h2>Use your own JSON source</h2>
+        <hr>
+        </h2>
+        <code class="code">
+            <legend>php</legend>
+            $source =json_decode(file_get_contents('sample_users2.json'));<br>
+            $datas = new JsonRequest($source->datas, false);<br>
+            echo $datas->showDatas();
+        </code>
+        <p>
+            <?php
+            $source =json_decode(file_get_contents('sample_users2.json'));
+            $datas = new JsonRequest($source->datas,false);
+            echo $datas->showDatas();
             ?>
         </p>
     </main>
